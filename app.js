@@ -21,9 +21,9 @@ app.get("/", function(req, res) {
     res.sendFile(__dirname + "/signup.html");
 });
 
-const apikey = process.env.API_KEY;
-const listid = process.env.LIST_ID;
-const Server = process.env.API_Server;
+// const apikey = process.env.API_KEY;
+// const listid = process.env.LIST_ID;
+// const Server = process.env.API_Server;
 
 
 
@@ -51,11 +51,11 @@ app.post("/", function(req, res){
     const jsonData = JSON.stringify(data);
  
     // *** url = "https://<data center>.api.mailchimp.com/3.0/lists/{listID}";
-    const url = "https://" + Server +".api.mailchimp.com/3.0/lists/"+ listid;
+    const url = "https://us9.api.mailchimp.com/3.0/lists/a395738641";
  
     const options = {
         method: "POST",
-        auth: "keshav:" + apikey
+        auth: "keshav:2327cbac8c29f9b804829a7038580e9b-us9"
     };
     
     // *** Requesting and send back our data to mailchimp ***
